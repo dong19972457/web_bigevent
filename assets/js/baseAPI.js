@@ -15,13 +15,13 @@ $.ajaxPrefilter(function(options) {
         }
     }
     // 全局统一挂载 complete  回调函数
-    options.complete = function(res) {
-        // 在complete回调中,可以使用res.response
-        // console.log(res.responseJSON);
-        if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-            console.log('失败了');
-            localStorage.removeItem('token');
-            location.href = '/login.html';
-        }
-    }
+    // options.complete = function(res) {
+    //     // 在complete回调中,可以使用res.response
+    //     // console.log(res.responseJSON);
+    //     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+    //         console.log('失败了');
+    //         localStorage.removeItem('token');
+    //         location.href = '/login.html';
+    //     }
+    // }
 })
